@@ -2,7 +2,7 @@
 
 build: ## build develoment environment with laradock
 	if ! [ -f .env ];then cp .env.example .env;fi
-	docker-compose up -d php
+	docker-compose build
 	docker-compose run --rm php composer install
 	docker-compose run --rm php php artisan key:generate
 	docker-compose run --rm php php artisan migrate
