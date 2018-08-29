@@ -24,7 +24,7 @@ services:
       MYSQL_DATABASE: laravel_development
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
-    - 3306:3306
+      - 3306:3306
   yarn:
     build:
       context: docker/yarn
