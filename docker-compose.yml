@@ -8,6 +8,7 @@ services:
       - .:/app
       - composer-volume:/app/vendor
       - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+      - ./.config/psysh:/root/.config/psysh
     command: ["php", "artisan", "serve", "--host", "0.0.0.0"]
     ports:
       - 8000:8000
