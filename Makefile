@@ -24,11 +24,14 @@ ide-helper: ## Make ide-helper files
 	docker-compose run --rm php php artisan ide-helper:models -N
 	docker-compose run --rm php php artisan ide-helper:meta
 
+yarn-install: ## Run yarn install
+	docker-compose run --rm node yarn install
+
 yarn-dev: ## Entry for yarn command
-	docker-compose run --rm yarn run dev
+	docker-compose run --rm node yarn run dev
 
 yarn-watch: ## Run yarn watch
-	docker-compose run --rm yarn run watch
+	docker-compose run --rm node yarn run watch
 
 .PHONY: help
 help:
