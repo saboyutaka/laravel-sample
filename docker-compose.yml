@@ -26,12 +26,12 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
       - 3306:3306
-  yarn:
-    build:
-      context: docker/yarn
+  node:
+    image: node:12
     volumes:
       - .:/app
       - node-modules-volume:/app/node_modules
+    working_dir: /app
 volumes:
   composer-volume:
   node-modules-volume:
